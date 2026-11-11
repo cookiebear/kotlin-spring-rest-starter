@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: kotlin-spring-rest-starter
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/starter}
+    username: ${DB_USERNAME:starter}
+    password: ${DB_PASSWORD:starter_local_only}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+app:
+  jwt:
+    secret: ${JWT_SECRET:replace-with-a-random-32-byte-minimum-secret-before-deployment}
+    expiration-minutes: 60
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
