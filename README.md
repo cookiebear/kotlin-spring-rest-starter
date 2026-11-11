@@ -98,28 +98,4 @@ Error: `{"success":false,"error":{"code":"NOTE_NOT_FOUND","message":"Note not fo
 - API keys/passwords must never be committed to GitHub.
 - No external AI API keys or paid services are required.
 
-## GitHub upload
-
-Create a **public, empty** repository called `kotlin-spring-rest-starter` on GitHub (do not initialize README). From the extracted project directory:
-
-```bash
-git init
-git add .
-git commit -m "Initial Kotlin Spring REST API starter"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/kotlin-spring-rest-starter.git
-git push -u origin main
-```
-
-If GitHub asks for HTTPS credentials, use a Personal Access Token with repository Contents write permission (or configure GitHub CLI / SSH). Never paste a token into chat or commit it to the repository.
-
-## Roadmap
-
-- [ ] PostgreSQL integration tests with Testcontainers
-- [ ] Refresh token and authentication hardening
-- [ ] Role-based authorization and audit log
-- [ ] Tenant membership / building-scoped access
-- [ ] Billing and maintenance sample modules
-- [ ] Official Gradle wrapper + dependency verification
-
 MIT license.
